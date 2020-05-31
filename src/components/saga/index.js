@@ -8,7 +8,7 @@ function* getUserLoginData() {
 
 function* getUserLoginData_Worker(loginDetails) {
     const detail = loginDetails.data;
-    const url = `http://localhost:8000/login`
+    const url = `login`
     const payload = yield fetch(url, { 
         method: 'POST',
         headers: {
