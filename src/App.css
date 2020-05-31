@@ -1,38 +1,203 @@
 .App {
   text-align: center;
+  background-image: url(./images/books-classroom-college-desk-289738.jpg);
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+  background-color: blue;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  text-align: left;
+  
+}
+.logoImg{
+  margin-left: 5%;
+}
+.logoImg img{
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.headerBtn{
+  padding:5px ;
+  border: none;
+  background-color: cadetblue;
+  font-size: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.loginBtn{
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+.login_sidebar{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2px;
+}
+
+
+.loginPage{
+  background-image: url(./images/wallpaperflare.com_wallpaper\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 25%;
+  min-height: 200px;
+  margin-right: 5%;
+  margin-top: 7%;
+  padding: 10px 50px 70px 50px;
+  float: right;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.input{
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  text-align: left;
+  grid-gap: 7px;
+  padding: 0px 20px 0px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loginBtn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5% 5% 5% 1%;
+}
+
+.btn{
+  padding: 7px 25px 7px 25px;
+  border: none;
+}
+
+
+
+/* signUp page css  */
+
+.signUppage{
+  background-image: url(./images/wallpaperflare.com_wallpaper\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 25%;
+  min-height: 200px;
+  margin-right: 5%;
+  margin-top: 7%;
+  padding: 20px 50px 70px 50px;
+  float: right;
+  color: white;
+}
+
+.signUpDetail{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+.register{
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  /* grid-gap:px; */
+}
+.signUpBtn{
+  padding:5px ;
+  border: none;
+  background-color: cadetblue;
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+
+/* contentPage CSS */
+.contentPage{
+  padding: 20px 50px 20px 100px;
+  display: flex;
+  /* justify-content: space-around; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.contentOuterDiv{
+  font-size: 17px;
+  font-family: fantasy;
+  background-image: url(./images/sand-2005066_640.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+  margin-left: 4%;
+  margin-bottom: 10px;
+  padding: 30px 70px 10px 70px;
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr;
+  grid-gap: 7px;
+  color: black;
+  border-radius: 10px;
+  font-family: sans-serif;
+}
+
+.author{
+  text-align: right;
+  font-weight: bolder;
+}
+
+.title{
+  font-weight: bolder;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* add articles css  */
+
+.addArticlePage{
+  background-image: url(./images/wallpaperflare.com_wallpaper\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  min-height: 300px;
+  margin-left: 22%;
+  margin-top: 7%;
+  padding: 20px 50px 20px 50px;
+  color: white;
+}
+
+.articleDetail{
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr ;
+  grid-gap: 15px;
+}
+.addArticle{
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  /* grid-gap:px; */
+}
+
+.addBtm{
+  display: flex;
+  justify-content:space-between;
+}
+
+.backbtn{
+  background-color: teal;
+  padding: 7px 15px 7px 15px;
+  margin-left: 25%;
+}
+
+/* back link */
+.back{
+  color:black;
+  text-decoration: none;
+  font-weight: lighter;
 }
