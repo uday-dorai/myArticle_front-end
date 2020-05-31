@@ -24,11 +24,9 @@ class signUpPage extends Component {
 
     onsubmitHandler=(e)=>{
         e.preventDefault();
-        console.log(this.state)
         this.setState({ submitted: true });
         const { username, password,email,address } = this.state;
         if (username && password && email && address) {
-            console.log(this.state)
             this.props.newUser(username, password,email,address);
         }
     }

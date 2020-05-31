@@ -7,9 +7,7 @@ function* getUserLoginData() {
 }
 
 function* getUserLoginData_Worker(loginDetails) {
-    console.log(loginDetails);
     const detail = loginDetails.data;
-    console.log(detail)
     const url = `http://localhost:8000/login`
     const payload = yield fetch(url, { 
         method: 'POST',
@@ -20,17 +18,16 @@ function* getUserLoginData_Worker(loginDetails) {
         body: JSON.stringify(detail), 
          })
          .then(resp => {
-        if(resp.status == 200){
+        if(resp.status === 200){
             return resp.json()
-        }else if(resp.status == 403){
+        }else if(resp.status === 403){
             return {message:"Invalid username or password "}
         }else{
             return {message:"server error "}
 
         }
          })
-    console.log(payload)
-    if(payload.message == 'success'){
+    if(payload.message === 'success'){
         localStorage.setItem("Token",payload.accessToken)
         yield put({ type: 'SUCCESSFUL_LOGIN', payload })
     }else{
@@ -48,7 +45,6 @@ function* newUserDetails() {
 
 function* newUserDetails_Worker(newUserDetails) {
     const detail = newUserDetails.data;
-    console.log(detail)
     const url = `http://localhost:8000/register`
     const payload = yield fetch(url, { 
         method: 'POST',
@@ -58,7 +54,6 @@ function* newUserDetails_Worker(newUserDetails) {
         },
         body: JSON.stringify(detail)
     }) 
-    console.log(payload)
     yield put({ type: 'SUCCESSFUL_REGISTERED', payload })
 
 }
@@ -74,7 +69,6 @@ function* loadAllArticles_worker() {
     const payload = yield fetch(url, { 
         method: 'GET',
     }).then(resp => { return resp.json() })
-    console.log(payload)
     yield put({ type: 'SUCCESSFUL_LOADED_ARTICLES', payload })
 
 }
@@ -85,7 +79,6 @@ function* addnewArticles() {
 }
 
 function* addnewArticles_worker(newArticleData) {
-    console.log(newArticleData)
     const data =newArticleData.data;
     const bearerToken = newArticleData.data.accessToken
     const url = `http://localhost:8000/articles`
@@ -98,7 +91,6 @@ function* addnewArticles_worker(newArticleData) {
         },
         body: JSON.stringify(data)
     })
-    console.log(payload)
     yield put({ type: 'SUCCESSFUL_ADDED_ARTICLES', payload })
 
 }

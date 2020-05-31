@@ -23,12 +23,10 @@ class addArticle extends Component {
 
     onsubmitHandler = async (e)=>{
         e.preventDefault();
-        console.log(this.props.accessToken)
         const { title, body,author } = this.state;
         const {accessToken} = this.props
 
         if (title && body && author ) {
-            console.log(this.state)
             await this.props.addNewArticle(title, body,author,accessToken);
         }
     }

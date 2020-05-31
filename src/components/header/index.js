@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Logo from '../../images/logo.png';
-import {Link,withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 import {logOut} from '../actions';
 
@@ -27,7 +27,7 @@ class header extends Component {
                 <div className='header'>
                     <div className='logo'>
                         <div className='logoImg'>
-                            <img src={Logo}></img>
+                            <img src={Logo} alt=''></img>
                         </div>
                     </div>
                     <div className='login_sidebar'>
@@ -41,7 +41,7 @@ class header extends Component {
                 <div className='header'>
                     <div className='logo'>
                         <div className='logoImg'>
-                            <img src={Logo}></img>
+                            <img src={Logo} alt=''></img>
                         </div>
                     </div>
                     <div className='login_sidebar'>

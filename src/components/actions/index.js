@@ -9,7 +9,6 @@ export const userLogin=(username,password)=>{
 }
 
 export const newUser=(username,password,email,address)=>{
-    console.log(username)
     return{
         type:'NEW_USER_DETAIL',
         data:{

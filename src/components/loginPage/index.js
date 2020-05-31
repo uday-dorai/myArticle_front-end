@@ -41,7 +41,7 @@ class loginPage extends Component {
 
     Message=()=>{
         const {message} = this.props
-        if(message != ''){
+        if(message !== ''){
             return(
                 <div>{message}</div>
             )
@@ -51,7 +51,7 @@ class loginPage extends Component {
         
     }
     render() {
-        const { username, password, submitted } = this.state;
+        const { username, password } = this.state;
        
         return (
             <div className='loginPage'>

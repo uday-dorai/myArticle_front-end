@@ -23,7 +23,6 @@ const reducers = (state = initialState, action) => {
                 message:action.payload.message
             }
         case ALREADY_LOGIN_SUCCESS:
-            console.log(action.payload)
             return{
                 accessToken:action.payload,
                 logged_In:true
@@ -33,7 +32,6 @@ const reducers = (state = initialState, action) => {
                     success:true,
                 }
         case SUCCESSFUL_LOADED_ARTICLES:
-            console.log(action.payload)
             return{
                 accessToken:state.accessToken,
                 logged_In:state.logged_In,
